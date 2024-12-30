@@ -6,7 +6,7 @@
 
 ~(also this is my first proper geode mod and first experience with c++ in general so sorry if the code is unoptimised :3)~
 
-# THIS MOD HASN'T BEEN TESTING WITH WINDOWS AND ANDROID BUT IT SHOULD PROBABLY WORK HOPEFULLY :3
+# THIS MOD HASN'T BEEN TESTED WITH WINDOWS AND ANDROID BUT IT SHOULD PROBABLY WORK HOPEFULLY :3
 
 ## Settings
 Every tab has a toggle for using custom or normal textures, a few have an in-built alt texture you can also toggle. *(I will probably not be adding alt texture support to every tab so dont use those if you are making custom icons)*
