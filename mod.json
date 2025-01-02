@@ -1,5 +1,5 @@
 {
-	"geode": "4.1.1",
+	"geode": "4.1.2",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -7,144 +7,186 @@
 	},
 	"id": "nwo5.better_object_tab_icons",
 	"name": "Better Object Tab Icons",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "Nwo5",
 	"description": "Better and Customisable Object Tab Icons!",
-
 	"resources": {
         "sprites": [
             "resources/*.png"
         ]
     },
-
 	"tags":[
 		"editor",
 		"enhancement",
 		"customization"
 	],
-
+	"links": {
+		"source": "https://github.com/nwo5-trg/Better-Obj-Tab-Icons"
+	},
 	"settings": {
+		"blocktab-title":
+		{
+			"type": "title",
+			"name": "Block Tab (No built-in texture, only for texture packs.)"
+		},
 		"blocktab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'block-tab' Icons",
-    	"description": "NO TEXTURE BY DEFAULT, ONLY FOR TEXTURE PACKS",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'block-tab' Icons",
+			"default": false
+		},
+		"outlinetab-title":
+		{
+			"type": "title",
+			"name": "Outline Tab (No built-in texture, only for texture packs.)"
+		},
 		"outlinetab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'outline-tab' Icons",
-    	"description": "NO TEXTURE BY DEFAULT, ONLY FOR TEXTURE PACKS",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'outline-tab' Icons",
+			"default": false
+		},
+		"hazardtab-title":
+		{
+			"type": "title",
+			"name": "Hazard Tab (No built-in texture, only for texture packs.)"
+		},
 		"hazardtab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'hazard-tab' Icons",
-    	"description": "NO TEXTURE BY DEFAULT, ONLY FOR TEXTURE PACKS",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'hazard-tab' Icons",
+			"default": false
+		},
+		"threedtab-title":
+		{
+			"type": "title",
+			"name": "3D Tab"
+		},
 		"threedtab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom '3d-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom '3d-tab' Icons",
+			"default": true
+		},
 		"threedtab-alt":
-	{
-		"type": "bool",
-    	"name": "Enable Alternate Texture For '3d-tab'",
-		"enable-if": "threedtab-toggle",
-    	"description": "",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Alternate Texture For '3d-tab'",
+			"enable-if": "threedtab-toggle",
+			"default": false
+		},
+		"portaltab-title":
+		{
+			"type": "title",
+			"name": "Portal Tab (No built-in texture, only for texture packs.)"
+		},
 		"portaltab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'portal-tab' Icons",
-    	"description": "NO TEXTURE BY DEFAULT, ONLY FOR TEXTURE PACKS",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'portal-tab' Icons",
+			"default": false
+		},
+		"monstertab-title":
+		{
+			"type": "title",
+			"name": "Monster Tab"
+		},
 		"monstertab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'monster-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'monster-tab' Icons",
+			"default": true
+		},
+		"pixeltab-title":
+		{
+			"type": "title",
+			"name": "Pixel Tab"
+		},
 		"pixeltab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'pixel-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'pixel-tab' Icons",
+			"default": true
+		},
 		"pixeltab-alt":
-	{
-		"type": "bool",
-    	"name": "Enable Alternate Texture For 'pixel-tab'",
-		"enable-if": "pixeltab-toggle",
-    	"description": "",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Alternate Texture For 'pixel-tab'",
+			"enable-if": "pixeltab-toggle",
+			"default": false
+		},
+		"collectibletab-title":
+		{
+			"type": "title",
+			"name": "Collectible Tab"
+		},
 		"collectibletab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'collectible-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-	
+		{
+			"type": "bool",
+			"name": "Enable Custom 'collectible-tab' Icons",
+			"default": true
+		},
+		"icontab-title":
+		{
+			"type": "title",
+			"name": "Icon Tab"
+		},
 		"icontab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'icon-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'icon-tab' Icons",
+			"default": true
+		},
+		"decotab-title":
+		{
+			"type": "title",
+			"name": "Deco Tab (No built-in texture, only for texture packs.)"
+		},
 		"decotab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'deco-tab' Icons",
-    	"description": "",
-    	"default": false
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'deco-tab' Icons",
+			"default": false
+		},
+		"sawbladetab-title":
+		{
+			"type": "title",
+			"name": "Sawblade Tab"
+		},
 		"sawbladetab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'sawblade-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'sawblade-tab' Icons",
+			"default": true
+		},
+		"triggertab-title":
+		{
+			"type": "title",
+			"name": "Trigger Tab"
+		},
 		"triggertab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'trigger-tab' Icons",
-    	"description": "",
-    	"default": true
-	},
-	
+		{
+			"type": "bool",
+			"name": "Enable Custom 'trigger-tab' Icons",
+			"default": false
+		},
+		"customtab-title":
+		{
+			"type": "title",
+			"name": "Custom Tab"
+		},
 		"customtab-toggle": 
-	{
-    	"type": "bool",
-    	"name": "Enable Custom 'custom-tab' Icons",
-    	"description": "",
-    	"default": true
-	}
-
+		{
+			"type": "bool",
+			"name": "Enable Custom 'custom-tab' Icons",
+			"default": true
+		},
+		"customtab-alt":
+		{
+			"type": "bool",
+			"name": "Enable Alternate Texture For 'custom-tab'",
+			"enable-if": "customtab-toggle",
+			"default": true
+		}
 	}
 }
