@@ -416,7 +416,7 @@ decotabspr2->setOpacity(150);
 }
 //thank you claude for copy pasting that code for me i wouldve killed myself otherwise
 
-            log::debug("shit happened");
+            log::debug("better icons applied (hopefully)");
 
 		return true;
 	}
