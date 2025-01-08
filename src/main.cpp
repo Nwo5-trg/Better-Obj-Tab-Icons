@@ -19,6 +19,7 @@ class $modify(editui, EditorUI)
 
 // function but not
 auto setupSprite = [&] (CCSprite* spr, cocos2d::CCSprite* tabsprc) {
+if (!spr || !tabsprc) return;
 tabsprc->addChild(spr);
 static_cast<cocos2d::CCNode*>(tabsprc->getChildren()->objectAtIndex(0))->setVisible(false);
 spr->setScale (0.55);
