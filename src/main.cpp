@@ -14,6 +14,7 @@ class $modify(editui, EditorUI)
 
 // this code is so bad but i cant find another way to do it :sob:
 // wait wait im stupid what hold up i can slightly fix it to not use 15 million variables
+// github is so hard bro idk what im doing
             auto buildtabs = this->getChildByID("build-tabs-menu");
 
 // function but not

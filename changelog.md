@@ -1,4 +1,8 @@
 ﻿
+# V1.1.1
+
+ * Added node ids dependency 
+
 # v1.1.0
 
  * Fixed 3DL icon being bad on low screen sizes
@@ -10,7 +14,7 @@
 
 # v1.0.1
 
- * I don't even know honestley
+ * I don't even know honestly
 
 # v1.0.0
 
