@@ -1,4 +1,8 @@
 ﻿
+# v1.1.2
+ 
+ * "fix issue causing potential crashes" - hiimjustin000
+
 # V1.1.1
 
  * Added node ids dependency 
