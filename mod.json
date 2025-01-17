@@ -7,7 +7,7 @@
 	},
 	"id": "nwo5.better_object_tab_icons",
 	"name": "Better Object Tab Icons",
-	"version": "v1.1.2",
+	"version": "v1.1.3",
 	"developer": "Nwo5",
 	"description": "Better and Customisable Object Tab Icons!",
 	"dependencies": [
@@ -51,6 +51,17 @@
 		{
 			"type": "bool",
 			"name": "Enable Custom 'outline-tab' Icons",
+			"default": false
+		},
+		"slopetab-title":
+		{
+			"type": "title",
+			"name": "Slope Tab (No built-in texture, only for texture packs.)"
+		},
+		"slopetab-toggle": 
+		{
+			"type": "bool",
+			"name": "Enable Custom 'slope-tab' Icons",
 			"default": false
 		},
 		"hazardtab-title":

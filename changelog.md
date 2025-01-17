@@ -1,4 +1,7 @@
-﻿
+﻿# v1.1.3
+ 
+ * I FORGOT THE SLOPE TAB IM CRYING :sob:
+
 # v1.1.2
  
  * "fix issue causing potential crashes" - hiimjustin000

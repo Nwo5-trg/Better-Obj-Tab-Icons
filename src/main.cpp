@@ -144,6 +144,13 @@ if (Mod::get()->getSettingValue<bool>("decotab-toggle"))
 setupSprite(CCSprite::create("deco-tab.png"_spr), static_cast<cocos2d::CCSprite*>(static_cast<cocos2d::CCSprite*>(buildtabs->getChildByID("deco-tab")->getChildren()->objectAtIndex(0))->getChildren()->objectAtIndex(0)));
 setupSprite(CCSprite::create("deco-tab.png"_spr), static_cast<cocos2d::CCSprite*>(static_cast<cocos2d::CCSprite*>(buildtabs->getChildByID("deco-tab")->getChildren()->objectAtIndex(1))->getChildren()->objectAtIndex(0)));
 }
+
+// Slope tab holy how did i forget this
+if (Mod::get()->getSettingValue<bool>("slopetab-toggle"))
+{
+setupSprite(CCSprite::create("slope-tab.png"_spr), static_cast<cocos2d::CCSprite*>(static_cast<cocos2d::CCSprite*>(buildtabs->getChildByID("slope-tab")->getChildren()->objectAtIndex(0))->getChildren()->objectAtIndex(0)));
+setupSprite(CCSprite::create("slope-tab.png"_spr), static_cast<cocos2d::CCSprite*>(static_cast<cocos2d::CCSprite*>(buildtabs->getChildByID("slope-tab")->getChildren()->objectAtIndex(1))->getChildren()->objectAtIndex(0)));
+}
             log::debug("something happened so you did it right");
 
 		return true;
