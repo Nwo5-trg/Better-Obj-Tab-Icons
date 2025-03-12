@@ -1,4 +1,7 @@
 ﻿
+# v2.0.1
+- **Fixed** crash with mods that add new tabs by changing 1 line :/
+
 # v2.0.0
 - **Added** rewrote the entire mod because the code was so bad
 - **Added** new formating for changelog :3
