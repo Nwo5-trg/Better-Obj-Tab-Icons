@@ -31,7 +31,7 @@ class $modify(EditUI, EditorUI) {
             auto tabNode = m_tabsMenu->getChildByID(tabName);
             if (!tabNode) continue;
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
-            auto spr = CCSprite::create(fmt::format("{}{}.png"_spr, tabName, altSuffix).c_str());
+            auto spr = CCSprite::create(fmt::format("{}/{}{}.png", mod->getID(), tabName, altSuffix).c_str());
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
         }
