@@ -27,7 +27,7 @@ class $modify(EditUI, EditorUI) {
             spr->setOpacity(150);
         };
 
-        for (int i = 0; i < m_tabsMenu->getChildren()->count(); i++) {
+        for (int i = 0; i < 14; i++) {
             if (!mod->getSettingValue<bool>(std::string(tabs[i].second) + "-toggle")) continue;
             if (auto tab = m_tabsMenu->getChildByType<CCNode>(i)) {
                 auto spr = CCSprite::create(mod->getSettingValue<bool>(std::string(tabs[i].second) + "-alt") ? 
