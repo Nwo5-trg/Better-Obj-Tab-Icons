@@ -28,7 +28,7 @@ class $modify(EditUI, EditorUI) {
 		if (!EditorUI::init(editorLayer)) return false;
         for (tab : tabs) {
             const std::string& settingsAlias = tab == "3d-tab" ? "threed-tab" : tab;
-            if (!mod->getSettingValue<bool>(fmt::format("{}-toggle", settingsAlias)) continue;
+            if (!mod->getSettingValue<bool>(fmt::format("{}-toggle", settingsAlias))) continue;
             auto tabNode = m_tabsMenu->getChildByID(tab);
             if (!tabNode) continue;
             auto spr = CCSprite::create(mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ?
