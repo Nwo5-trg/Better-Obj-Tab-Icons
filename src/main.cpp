@@ -27,7 +27,7 @@ class $modify(EditUI, EditorUI) {
 	bool init(LevelEditorLayer* editorLayer) {	
 		if (!EditorUI::init(editorLayer)) return false;
         for (tab : tabs) {
-            const std::string& settingsAlias = tab == "3d-tab" ? "threed-tab" : tab
+            const std::string& settingsAlias = tab == "3d-tab" ? "threed-tab" : tab;
             if (!mod->getSettingValue<bool>(fmt::format("{}-toggle", settingsAlias)) continue;
             auto tabNode = m_tabsMenu->getChildByID(tab);
             if (!tabNode) continue;
