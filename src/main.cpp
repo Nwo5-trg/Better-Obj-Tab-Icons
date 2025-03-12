@@ -13,9 +13,9 @@ const std::vector<std::string> tabs { // have to make a pair literally just for 
 class $modify(EditUI, EditorUI) {
     void setupBetterSprite(CCSprite* spr, CCSprite* tab, const std::string& nodeID) {
         if (!spr || !tab || tab->getTag() != 1) return;
+        log::info("many of {} preconditions were met! moving forward to grab grandchild node", nodeID);
         CCSprite* nestedGreatGrandChild = tab->getChildByType<CCSprite>(0);
         if (!nestedGreatGrandChild || nestedGreatGrandChild->getTag() != 1) return;
-        log::info("{} preconditions met! moving forward", nodeID);
         nestedGreatGrandChild->setVisible(false);
         tab->addChild(spr);
         spr->setScale(nestedGreatGrandChild->getScale());
@@ -35,7 +35,6 @@ class $modify(EditUI, EditorUI) {
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
             const std::string& spriteName = fmt::format("{}/{}{}.png", mod->getID(), tabName, altSuffix);
             CCSprite* spr = CCSprite::create(spriteName.c_str());
-            if (!spr) log::info("{} creation failed!", spriteName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
         }
