@@ -18,8 +18,8 @@ class $modify(EditUI, EditorUI) {
         nestedGreatGrandChild->setVisible(false);
         tab->addChild(spr);
         spr->setScale(.5f);
+        spr->setOpacity(150);
         spr->setPosition(nestedGreatGrandChild->getPosition());
-        spr->setOpacity(nestedGreatGrandChild->getOpacity());
         spr->setID(fmt::format("{}"_spr, nodeID));
     };
 	bool init(LevelEditorLayer* editorLayer) {	
