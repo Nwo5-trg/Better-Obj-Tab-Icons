@@ -17,7 +17,7 @@ class $modify(EditUI, EditorUI) {
         if (!nestedGreatGrandChild) return;
         nestedGreatGrandChild->setVisible(false);
         tab->addChild(spr);
-        spr->setScale(nestedGreatGrandChild->getScale());
+        spr->setScale(.5f);
         spr->setPosition(nestedGreatGrandChild->getPosition());
         spr->setOpacity(nestedGreatGrandChild->getOpacity());
         spr->setID(fmt::format("{}"_spr, nodeID));
@@ -31,7 +31,7 @@ class $modify(EditUI, EditorUI) {
             auto tabNode = m_tabsMenu->getChildByID(tabName);
             if (!tabNode) continue;
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
-            const std::string& spriteName = fmt::format("{}/{}{}.png", mod->getID(), tabName, altSuffix);
+            const std::string& spriteName = fmt::format("{}{}.png"_spr, tabName, altSuffix);
             CCSprite* spr = CCSprite::create(spriteName.c_str());
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
