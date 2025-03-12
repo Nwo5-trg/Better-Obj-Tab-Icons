@@ -15,6 +15,7 @@ class $modify(EditUI, EditorUI) {
         if (!spr || !tab || tab->getTag() != 1) return;
         CCSprite* nestedGreatGrandChild = tab->getChildByType<CCSprite>(0);
         if (!nestedGreatGrandChild || nestedGreatGrandChild->getTag() != 1) return;
+        log::info("{} preconditions met! moving forward", nodeID);
         nestedGreatGrandChild->setVisible(false);
         tab->addChild(spr);
         spr->setScale(nestedGreatGrandChild->getScale());
@@ -30,8 +31,11 @@ class $modify(EditUI, EditorUI) {
             if (!mod->getSettingValue<bool>(fmt::format("{}-toggle", settingsAlias))) continue;
             auto tabNode = m_tabsMenu->getChildByID(tabName);
             if (!tabNode) continue;
+            log::info("{} found! moving forward", tabName);
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
-            auto spr = CCSprite::create(fmt::format("{}/{}{}.png", mod->getID(), tabName, altSuffix).c_str());
+            const std::string& spriteName = fmt::format("{}/{}{}.png", mod->getID(), tabName, altSuffix);
+            CCSprite* spr = CCSprite::create(spriteName.c_str());
+            if (!spr) log::info("{} creation failed!", spriteName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
         }
