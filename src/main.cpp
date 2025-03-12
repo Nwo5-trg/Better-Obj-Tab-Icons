@@ -2,7 +2,9 @@
 
 using namespace geode::prelude;
 
-const std::vector<std::string> tabs { // have to make a pair literally just for 3d tab
+// have to make a pair literally just for 3d tab --nwo5
+// no you dont lol --ery
+const std::vector<std::string> tabs {
     "block-tab", "outline-tab", "slope-tab",
     "hazard-tab", "3d-tab", "portal-tab",
     "monster-tab", "pixel-tab", "collectible-tab",
@@ -33,6 +35,7 @@ class $modify(EditUI, EditorUI) {
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
             const std::string& spriteName = fmt::format("{}{}.png"_spr, tabName, altSuffix);
             CCSprite* spr = CCSprite::create(spriteName.c_str());
+            if (spr->getUserObject("geode.texture-loader/fallback")) continue;
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
         }
