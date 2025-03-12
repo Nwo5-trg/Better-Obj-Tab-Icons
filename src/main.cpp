@@ -4,7 +4,7 @@ using namespace geode::prelude;
 
 #define mod Mod::get();
 
-std::vector<std::string> tabs { // have to make a pair literally just for 3d tab
+const std::vector<std::string> tabs { // have to make a pair literally just for 3d tab
     "block-tab", "outline-tab", "slope-tab",
     "hazard-tab", "3d-tab", "portal-tab",
     "monster-tab", "pixel-tab", "collectible-tab",
@@ -31,12 +31,11 @@ class $modify(EditUI, EditorUI) {
             if (!mod->getSettingValue<bool>(fmt::format("{}-toggle", settingsAlias))) continue;
             auto tabNode = m_tabsMenu->getChildByID(tab);
             if (!tabNode) continue;
-            auto spr = CCSprite::create(mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ?
-                fmt::format("{}-alt.png"_spr, tab).c_str() : fmt::format("{}.png"_spr, tab).c_str());
+            const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
+            auto spr = CCSprite::create(fmt::format("{}{}.png"_spr, tab, altSuffix).c_str());
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tab);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tab);
         }
-        
 		return true;
 	}
 };
