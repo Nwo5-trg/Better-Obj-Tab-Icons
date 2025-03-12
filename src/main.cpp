@@ -35,7 +35,7 @@ class $modify(EditUI, EditorUI) {
             const std::string& altSuffix = mod->getSettingValue<bool>(fmt::format("{}-alt", settingsAlias)) ? "-alt" : "";
             const std::string& spriteName = fmt::format("{}{}.png"_spr, tabName, altSuffix);
             CCSprite* spr = CCSprite::create(spriteName.c_str());
-            if (spr->getUserObject("geode.texture-loader/fallback")) continue;
+            if (!spr || spr->getUserObject("geode.texture-loader/fallback")) continue;
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(0)->getChildByType<CCSprite>(0), tabName);
             EditUI::setupBetterSprite(spr, tabNode->getChildByType<CCMenuItemSpriteExtra>(1)->getChildByType<CCSprite>(0), tabName);
         }
